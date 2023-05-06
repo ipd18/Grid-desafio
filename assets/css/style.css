@@ -1,0 +1,175 @@
+/* ARREGLOS GENERALES */
+body {
+    margin: 0;
+    height: 100vh;
+
+    width: 100vw;
+
+}
+
+ul {
+    list-style: none;
+}
+
+/* SECCION SUPERIOR HEADER Y NAVBAR */
+.header {
+    grid-area: header;
+    background-color: #0b0c0c;
+    position: sticky;
+    top: 0;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 2rem;
+}
+
+nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 10rem;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 25px;
+}
+
+nav button:hover {
+    background-color: gray;
+    width: 11rem;
+    color: white;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.logoimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+
+    margin: 10px;
+}
+
+.title {
+
+    padding-left: 2rem;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #2a2e34;
+    padding-left: 1rem;
+    padding-right: 5rem;
+    color: white;
+
+}
+
+
+.main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    overflow-y: scroll;
+
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 200px;
+    gap: 15px;
+}
+
+.product {
+    border: #1e1e1e solid 1px;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 8px 10px 42px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 10px 42px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 10px 42px -2px rgba(0, 0, 0, 0.75);
+}
+
+.product img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 25px 25px 0 0;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    align-items: center;
+    height: 6rem;
+}
+
+.shopping-btn {
+    width: 15rem;
+    height: 2rem;
+    color: black;
+    background-color: #f3f700;
+
+}
+
+.shopping-btn:hover {
+    background-color: #fdca00;
+    width: 15rem;
+    color: white;
+}
+
+
+.footer {
+    grid-area: footer;
+    color: white;
+    background-color: #0b0c0c;
+
+
+}
+
+
+.grid-container {
+    display: grid;
+    /* a diferencia de flex. usamos grid */
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: auto 1fr;
+    /* LO RECOMENDADO Y COMO MEJOR PRÁCTICA */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main  "
+        "footer footer footer ";
+}
+
+.grid-container footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box {
+    border: solid 1px black;
+}
